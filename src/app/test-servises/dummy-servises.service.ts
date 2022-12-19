@@ -52,7 +52,8 @@ export class DummyServisesService {
       { Name: "Amit Shukla", Departments: "BCA", Age: "21", Email: "Amit@gmail.com" },
       { Name: "Ankit Shukla", Departments: "BTECh", Age: "22", Email: "Ankit@gmail.com" },
       { Name: "Sandeep Sigh", Departments: "MCA", Age: "24", Email: "Sandeep@gmail.com" },
-      { Name: "hari Mishra", Departments: "Diploma", Age: "28", Email: "hari@gmail.com" }
+      { Name: "hari Mishra", Departments: "Diploma", Age: "28", Email: "hari@gmail.com" },
+      { Name: "Mukesh Mishra", Departments: "MBA", Age: "35", Email: "Mukesh@gmail.com" }
     ]
   }
 }
