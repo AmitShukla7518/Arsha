@@ -1,0 +1,51 @@
+<h1 class="heading">Reactive Form Control</h1>
+<section class="text-center text-lg-start">
+    <div class="container py-4">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <h2 class="fw-bold mb-5">Sign up now</h2>
+
+                        <form [formGroup]="UserForm" (ngSubmit)="save()">
+                            <!-- 2 column grid layout with text inputs for the first and last names -->
+
+                            <div class="row">
+                                <!-- Email input -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="form3Example2">Usernme</label>
+                                        <input type="text" class="form-control" formControlName="username" />
+                                        <span *ngIf="isvalidUsernme && isvalidUsernme.invalid && isvalidUsernme.touched"
+                                            style="color: red;">Please Enter Valid Email</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="form3Example2">Password</label>
+                                        <input type="text" class="form-control" formControlName="password" />
+                                        <span
+                                            *ngIf="isvalidPassword && isvalidPassword.invalid && isvalidPassword.touched"
+                                            style="color: red;">Please Enter Valid Password</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button> <br>
+                            <button type="submit" class="btn btn-primary btn-block mb-4" (click)="Logout()">logout</button>
+
+                        </form>
+
+
+                        {{ShowData }}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

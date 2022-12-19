@@ -1,0 +1,97 @@
+<h1 class="heading">Reactive Form Control</h1>
+<section class="text-center text-lg-start">
+    <div class="container py-4">
+        <div class="row g-0 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);">
+                    <div class="card-body p-5 shadow-5 text-center">
+                        <h2 class="fw-bold mb-5">Sign up now</h2>
+                        <form [formGroup]="UserForm" (ngSubmit)="save()">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="form3Example1">First name</label>
+                                        <input type="text" id="form3Example1" class="form-control" name="First_name"
+                                            formControlName="First_name" />
+                                        <span *ngIf="isValidFname && isValidFname.invalid && isValidFname.touched"
+                                            style="color: red;">Please Enter Valid First Name</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <label class="form-label" for="form3Example2">Last name</label>
+                                        <input type="text" class="form-control" name="Last_name"
+                                            formControlName="Last_name" />
+                                        <span *ngIf="isValidLname && isValidLname.invalid && isValidLname.touched"
+                                            style="color: red;">Please Enter Valid Last Name</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Email input -->
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example3">Email address</label>
+                                <input type="email" id="form3Example3" class="form-control" name="Email"
+                                    formControlName="Email" />
+                                <span *ngIf="isValidEmail && isValidEmail.invalid && isValidEmail.touched"
+                                    style="color: red;">Please Enter Valid Email Address</span>
+                            </div>
+
+                            <!-- Mobile Number input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example3">Mobile Number</label>
+                                <input type="email" id="form3Example7" class="form-control" name="MobileNO"
+                                    formControlName="MobileNO" />
+                                <span *ngIf="isValidMobile && isValidMobile.invalid && isValidMobile.touched"
+                                    style="color: red;">Please Enter Valid Mobile Number</span>
+                            </div>
+
+                            <!-- Password input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4">Password</label>
+                                <input type="password" class="form-control" name="Password"
+                                    formControlName="Password" />
+                                <span *ngIf="invalidPassword && invalidPassword.invalid && invalidPassword.touched"
+                                    style="color: red;">Please Enter Valid PasswordEx-Abcd@123)</span>
+
+                            </div>
+                            <!-- Confirm Password input -->
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="form3Example4">Confirm Password</label>
+                                <input type="password" class="form-control" name="CnfrmPassword"
+                                    formControlName="CnfrmPassword" />
+                                <span
+                                    *ngIf="UserForm.controls.CnfrmPassword.touched && UserForm.value.Password != UserForm.value.CnfrmPassword"
+                                    style="color: red;">Password do not match</span>
+                            </div>
+
+                            <!-- Checkbox -->
+                            <div class="form-check d-flex justify-content-center mb-4">
+                                <input class="form-check-input me-2" type="checkbox" name="CheckBox"
+                                    formControlName="CheckBox" />
+                                <label class="form-check-label" for="form2Example33">
+                                    Subscribe to our newsletter
+                                </label>
+                            </div>
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="UserForm.invalid">
+                                Sign up
+                            </button>
+                        </form>
+
+
+                        {{ShowData}}
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

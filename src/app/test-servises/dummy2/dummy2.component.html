@@ -1,0 +1,25 @@
+<!-- <h1>Dummy API Data 2</h1>
+<div style="color: light green;">
+    <ul>
+        <li *ngFor="let user of userList">
+            {{user.Name}} :{{user.Email}}
+        </li>
+    </ul>
+</div> -->
+
+
+<h1>Dummy API Data 2</h1>
+<div style="color: light green;">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+       </tr>
+        <tr *ngFor="let user of Emplist ">
+            <td>{{user.id}}</td>
+            <td>{{user.first_name}} {{user.last_name}}</td>
+          <td>{{user.email}}</td>
+        </tr>
+    </table>
+</div>

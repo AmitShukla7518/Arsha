@@ -1,0 +1,12 @@
+<h1>Post data from API</h1>
+
+<!-- <form #UserForm ="ngForm" (ngSubmit)="save(UserForm.value)"> -->
+    <form [formGroup]="UserForm" (ngSubmit)="save()">
+    <label>Name</label>
+    <input type="text" formControlName="Name"> <br><br>
+    <label>Job</label>
+    <input type="text" formControlName="Job"><br><br>
+    <button>Submit</button>
+
+</form>
+
