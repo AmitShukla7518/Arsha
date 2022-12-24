@@ -40,11 +40,11 @@ export class DummyServisesService {
   }
 
   GetEMPListByID(data: any) {
-   
-    // return this.DummyAPI.get(data);
-     this.DummyAPI.get(data)
 
-     return this.myMethodSubject.asObservable();
+    // return this.DummyAPI.get(data);
+    this.DummyAPI.get(data)
+
+    return this.myMethodSubject.asObservable();
   }
 
   user() {

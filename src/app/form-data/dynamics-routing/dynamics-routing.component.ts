@@ -29,6 +29,7 @@ export class DynamicsRoutingComponent {
     this.DummyServisesService.myMethod(this.RoutesValus).subscribe(res => {
       this.GetEMP = res
       this.GetEMP = JSON.stringify(this.GetEMP)
+      console.log("this.GetEMP", this.GetEMP)
     })
 }
 }
